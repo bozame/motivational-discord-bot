@@ -1,12 +1,17 @@
 from lib2to3.pgen2 import token
-from random import random
+import random
 from urllib import response
 import discord
 import os
 
-TOKEN = 'OTkzNjQ3ODY1MjYxOTgxNzM2.GB84Vw.ln9nxcFy3dvwndH2hOxY_am0s2n4A9_uoFBYRk'
+TOKEN = 'OTkzNjQ3ODY1MjYxOTgxNzM2.G3KkwH.N2Btb-pVjvjky-E1GA_PlWALzVpf_NwXSSVE58'
 
 client = discord.Client()
+
+phrases = ['you can do it!',
+'keep going, i believe in you!',
+"You learn more from failure than from success. Don't let it stop you. Failure builds character."]
+phrase = random.choice(phrases)
 
 @client.event
 async def on_ready():
@@ -25,9 +30,8 @@ async def on_message(message):
         if user_message.lower() == 'hello':
             await message.channel.send(f'Hello {username}!')
             return
-    elif user_message.lower() == '!random':
-        response = "phrase"
-        await message.channel.send(response)
-        return
+        elif user_message.lower() == '!random':
+            await message.channel.send(phrase)
+            return
 
 client.run(TOKEN)
