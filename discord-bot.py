@@ -1,10 +1,9 @@
 from lib2to3.pgen2 import token
 import random
-from urllib import response
 import discord
 import os
 
-TOKEN = 'OTkzNjQ3ODY1MjYxOTgxNzM2.GTmQx0.WErc0u-GCigWuoW82TZO0gd1HLu_l5Gk-54yNo'
+TOKEN = "" #add your own token here
 
 client = discord.Client()
 
@@ -14,6 +13,11 @@ phrases = ['you can do it!',
 "Don’t let yesterday take up too much of today.",
 "Setting goals is the first step in turning the invisible into the visible.",
 "Well done is better than well said."
+"Well done is better than well said.",
+"If you can dream it, you can do it.",
+"Aim for the moon. If you miss, you may hit a star.",
+"The past cannot be changed. The future is yet in your power.",
+"It always seems impossible until it's done."
 ]
 
 @client.event
