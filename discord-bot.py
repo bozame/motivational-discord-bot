@@ -1,4 +1,3 @@
-from lib2to3.pgen2 import token
 import random
 import discord
 import os
@@ -32,13 +31,12 @@ async def on_message(message):
     print(f'{username}: {user_message}({channel})')
 
     if message.author == client.user:
+        return  
+    if user_message.lower() == 'hello':
+        await message.channel.send(f'Hello {username}!')
         return
-    if message.channel.name == 'get-motivated':    
-        if user_message.lower() == 'hello':
-            await message.channel.send(f'Hello {username}!')
-            return
-        elif user_message.lower() == '!random':
-            await message.channel.send(random.choice(phrases))
-            return
+    elif user_message.lower() == '!random':
+        await message.channel.send(random.choice(phrases))
+        return
 
 client.run(TOKEN)
