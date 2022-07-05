@@ -11,7 +11,6 @@ phrases = ['you can do it!',
 "You learn more from failure than from success. Don't let it stop you. Failure builds character.",
 "Don’t let yesterday take up too much of today.",
 "Setting goals is the first step in turning the invisible into the visible.",
-"Well done is better than well said."
 "Well done is better than well said.",
 "If you can dream it, you can do it.",
 "Aim for the moon. If you miss, you may hit a star.",
